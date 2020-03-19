@@ -27,7 +27,7 @@ export default function createMultiStyleIconSet(styles, optionsInput = {}) {
       style.glyphMap || {},
       style.fontFamily || '',
       style.fontFile || '',
-      style.fontStyle || {},
+      style.fontStyle || {}
     );
 
     return acc;
@@ -39,7 +39,7 @@ export default function createMultiStyleIconSet(styles, optionsInput = {}) {
         styleNames.indexOf(propName) !== -1 && props[propName] === true
           ? propName
           : result,
-      options.defaultStyle,
+      options.defaultStyle
     );
   }
 
@@ -86,7 +86,7 @@ export default function createMultiStyleIconSet(styles, optionsInput = {}) {
     name,
     size = DEFAULT_ICON_SIZE,
     color = DEFAULT_ICON_COLOR,
-    style = options.defaultStyle,
+    style = options.defaultStyle
   ) {
     return getStyledIconSet(style, name).getImageSource(name, size, color);
   }
